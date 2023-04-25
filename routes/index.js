@@ -9,7 +9,7 @@ const router = new Router();
 
 router.get("/sum/:number1/:number2", async (req, res) => {
   let my_file = await s3.getObject({
-    Bucket: "your_bucket_name",
+    Bucket: "cyclic-dull-gray-katydid-veil-ca-central-1",
     Key: "number.json",
   }).promise()
   const favNumber = JSON.parse(my_file.Body)?.favouriteNumber;
